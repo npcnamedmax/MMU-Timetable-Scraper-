@@ -1,0 +1,2 @@
+Assumption: 
+Only one term in planner
