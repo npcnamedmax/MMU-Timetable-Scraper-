@@ -1,3 +1,4 @@
 chrome-headless-shell-linux64  
 chromedriver-linux64  
 node_modules
+.*

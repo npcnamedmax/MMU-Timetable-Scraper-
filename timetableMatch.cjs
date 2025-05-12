@@ -50,10 +50,6 @@ function filterSubArr(subjectArr, criteria) {
   return arr;
 }
 
-for (let i = 0; i < courseDetails.length; i++) {
-  courseDetails[i] = filterSubArr(courseDetails[i], criteria);
-}
-
 // Now `data` is a valid JS object that uses the Interval class.
 
 class CmbAttributes {

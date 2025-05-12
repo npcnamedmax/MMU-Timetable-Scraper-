@@ -11,6 +11,7 @@ const { WebElement } = require("selenium-webdriver");
 const { Interval } = require("./Trees.js");
 const { match } = require("./timetableMatch.cjs");
 const readline = require("readline");
+require("dotenv").config();
 
 const dayMap = new Map([
   ["Monday", 0],
@@ -213,9 +214,9 @@ async function delay(params) {
 
     //login page
     await driver.wait(until.elementLocated(By.name("login")), 10000);
-    await driver.findElement(By.id("userid")).sendKeys("1231301611");
+    await driver.findElement(By.id("userid")).sendKeys(process.env.STUDENT_ID);
 
-    await driver.findElement(By.id("pwd")).sendKeys("Jx@0809");
+    await driver.findElement(By.id("pwd")).sendKeys(process.env.STUDENT_PW);
     await driver.findElement(By.name("Submit")).click();
 
     //arrive at otp page
